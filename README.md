@@ -6,6 +6,22 @@
 - Next.js
 - Sass
 
+## Wireframes
+
+![](/wireframes.png)
+
+## User Stories
+
+- As new user, I can register for an account
+- As a (returning) user, I can log in to my account with my email and password
+- As a user, I can view my weekly calendar with a view of my schedule of all my waking hours
+- As a user, I can set my waking hours, which are reflected in the calendar (i.e. visible hours on schedule)
+- As a user, I can create activities (i.e. Wake-up/eat) (or choose activities from a pre-existing selection?)
+- As a user, I can place these activities on a weekly calendar in 30 minute blocks
+- As a user, I can remove activities from my weekly calendar
+- As a user, I can change the color of activities to any color in a predefined list 
+
+
 ## Codebase
 
 ### pages
