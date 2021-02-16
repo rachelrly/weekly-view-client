@@ -1,5 +1,11 @@
 # Weekly View
 
+## Tech Stack
+
+- React.js
+- Next.js
+- Sass
+
 ## Codebase
 
 ### pages
@@ -8,7 +14,7 @@ Contains the routes for all pages.
 
 ### styles
 
-Contains sass styles. All sass partials are imported into `styles.sass`, which is imported in `/pages/_app.js`
+Contains sass styles. All sass partials are imported into `styles.sass`, which is imported in `/pages/_app.js`. Comma seperate new imported partials on line 2. 
 
 #### _variables.sass
 
