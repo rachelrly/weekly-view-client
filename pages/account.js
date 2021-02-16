@@ -1,4 +1,5 @@
-export default function AccountPage(){
+import Account from '../components/Account'
 
-    return <div>This is the account page</div>
+export default function AccountPage(){
+    return <Account />
 }

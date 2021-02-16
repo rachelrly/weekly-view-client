@@ -1,4 +1,5 @@
+import WeeklyCalendar from '../components/WeeklyCalendar'
+//implement data fetching here
 export default function CalendarPage(){
-
-    return <div>This is the calendar page</div>
+    return <WeeklyCalendar />
 }
