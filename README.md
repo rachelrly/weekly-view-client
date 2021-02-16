@@ -1,4 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Weekly View
+
+## Codebase
+
+### pages
+
+Contains the routes for all pages. 
+
+### styles
+
+Contains sass styles. All sass partials are imported into `styles.sass`, which is imported in `/pages/_app.js`
+
+#### _variables.sass
+
+Contains all variables for the project. These are copied from my portfolio, feel free to change the values. 
+
+#### _base.sass
+
+Contains all base styles for elements.
+
+#### components
+
+Contains all component-specific styles
+
+### components
+
+Contains all react components, imported into their route in the pages directory
+
+### hooks
+
+Contains all custom hooks
+
+### contexts
+
+#### User Context
+
+Contains all data for the currently logged in user
+
+
+
+
+
+# Start Next.js README Boilerplate
+
+PLEASE SAVE UNTIL FIRST DEPLOY!!
 
 ## Getting Started
 
