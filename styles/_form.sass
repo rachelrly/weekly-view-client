@@ -1,8 +1,12 @@
 form
+    width: 100%
     display: flex
     flex-direction: column
     max-width: 500px
     fieldset
+        padding-top: $spacer-sm
+        border: 0
+        width: 100%
         display: flex
         justify-content: space-between
         align-items: center
@@ -10,3 +14,16 @@ form
             width: 100px
         input
             flex: 3
+            height: 2rem
+            font-size: $font-size-sm
+            padding: $spacer-tiny
+    .form-button-wrapper
+        margin-top: $spacer-med
+        display: flex
+        justify-content: space-between
+        align-items: center
+        a
+            text-decoration: none
+            color: $color-accent
+        a:focus, a:hover 
+            color: $color-accent-light

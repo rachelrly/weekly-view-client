@@ -1,18 +1,27 @@
 import React from 'react'
 import Link from 'next/link'
+import {postLogin} from '../services/auth-api-service'
 
 export default function Login(){
 
+    const handleSubmit = e => {
+        e.preventDefault()
+        const email = e.target.email.value
+        const password = e.target.password.value
+        console.log(email, password)
+        postLogin({email, password})
+    }
+
     return (
         <section>
-            <form onSubmit={()=>{}}>
+            <form onSubmit={e=>handleSubmit(e)}>
                 <fieldset>
                     <label>Email</label>
-                    <input type='text' />
+                    <input name='email' type='text' />
                 </fieldset>
                 <fieldset>
                     <label>Password</label>
-                    <input type='password' />
+                    <input name='password' type='password' />
                 </fieldset>
                 <div className='form-button-wrapper'>
                     <button type='submit'>Login</button>
