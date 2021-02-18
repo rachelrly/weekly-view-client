@@ -10,6 +10,12 @@
 
 ![](/wireframes.png)
 
+## Setup
+
+Create `.env.local` and add an `API_ENDPOINT` environmental variable.
+
+
+
 ## User Stories
 
 - As new user, I can register for an account

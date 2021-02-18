@@ -1,4 +1,5 @@
-import React from react
+import React from 'react'
+import Link from 'next/link'
 
 export default function Login(){
 
@@ -13,7 +14,12 @@ export default function Login(){
                     <label>Password</label>
                     <input type='password' />
                 </fieldset>
-                <button type='submit'>Login</button>
+                <div className='form-button-wrapper'>
+                    <button type='submit'>Login</button>
+                    <Link href='/register'>
+                        <a>Create an account</a>
+                    </Link>
+                </div>
             </form>
         </section>
     )
