@@ -9,12 +9,13 @@ export default function Registration(){
         const firstName = e.target.firstName.value
         const lastName = e.target.lastName.value
         const password = e.target.password.value
-        const repeatePassword = e.target.repeatePassword.value
-        const user = {email, firstName, lastName, password, repeatePassword}
+        const repeatPassword = e.target.repeatPassword.value
+        const user = {email, firstName, lastName, password, repeatPassword}
         postNewUser(user)
     }
 
     return(
+        <section>
         <form onSubmit={e=>handleRegister(e)}>
             <fieldset>
                 <label htmlFor='email'>Email</label>
@@ -33,8 +34,8 @@ export default function Registration(){
                 <input name='password'type='password'/>
             </fieldset>
             <fieldset>
-                <label htmlFor='repeatePassword'>Repeate password</label>
-                <input name='repeatePassword' type='password'/>
+                <label htmlFor='repeatPassword'>Repeat password</label>
+                <input name='repeatPassword' type='password'/>
             </fieldset>
             <div className='form-button-wrapper'>
                     <button type='submit'>Register</button>
@@ -43,5 +44,6 @@ export default function Registration(){
                     </Link>
                 </div>
         </form>
+        </section>
     )
 }
