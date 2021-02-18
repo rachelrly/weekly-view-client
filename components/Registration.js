@@ -21,15 +21,15 @@ export default function Registration(){
          autoComplete='new-password'>
             <fieldset>
                 <label htmlFor='email'>Email</label>
-                <input autoComplete='new-password' name='email' type='text'/>
+                <input  name='email' type='text'/>
             </fieldset>
             <fieldset>
                 <label htmlFor='firstName'>First name</label>
-                <input autoComplete='new-password' name='firstName' type='text'/>
+                <input name='firstName' type='text'/>
             </fieldset>
             <fieldset>
                 <label htmlFor='lastName'>Last name</label>
-                <input autoComplete='new-password' name='lastName' type='text'/>
+                <input name='lastName' type='text'/>
             </fieldset>
             <fieldset>
                 <label htmlFor='password'>Password</label>
