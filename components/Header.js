@@ -11,7 +11,7 @@ export default function Header(){
             <Link href='/'>
                 <h1>Weekly View</h1>
             </Link>
-            <Link href='login'>
+            <Link href='/login'>
                 <a className='button'>Login</a>
             </Link>
         </header>

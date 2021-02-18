@@ -12,7 +12,15 @@
 
 ## Setup
 
-Create `.env.local` and add an `API_ENDPOINT` environmental variable.
+Create `next.config.js` and add an the following environmental variable: 
+
+``` 
+module.exports = {
+    env: {
+        API_ENDPOINT: 'http://localhost:3000/v1'
+    }
+}
+```
 
 
 
