@@ -16,18 +16,20 @@ export default function Registration(){
 
     return(
         <section>
-        <form onSubmit={e=>handleRegister(e)}>
+        <form
+         onSubmit={e=>handleRegister(e)}
+         autoComplete='new-password'>
             <fieldset>
                 <label htmlFor='email'>Email</label>
-                <input name='email' type='text'/>
+                <input autoComplete='new-password' name='email' type='text'/>
             </fieldset>
             <fieldset>
                 <label htmlFor='firstName'>First name</label>
-                <input name='firstName' type='text'/>
+                <input autoComplete='new-password' name='firstName' type='text'/>
             </fieldset>
             <fieldset>
                 <label htmlFor='lastName'>Last name</label>
-                <input name='lastName' type='text'/>
+                <input autoComplete='new-password' name='lastName' type='text'/>
             </fieldset>
             <fieldset>
                 <label htmlFor='password'>Password</label>

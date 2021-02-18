@@ -8,8 +8,12 @@ export default function Header(){
 //else show login button
     return (
         <header>
-            <h1>Weekly View</h1>
-            <button>Login</button>
+            <Link href='/'>
+                <h1>Weekly View</h1>
+            </Link>
+            <Link href='login'>
+                <a className='button'>Login</a>
+            </Link>
         </header>
     )
 }

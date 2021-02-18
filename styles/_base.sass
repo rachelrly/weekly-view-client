@@ -12,19 +12,25 @@ main
     line-height: $line-height
     font-size: $font-size-sm
     font-family: $font-family
+    color: $color-white
+    background-color: $color-background-dark
     section
         display: flex
         flex-direction: column
         padding: $spacer-sm
         align-items: center
 
-
-button
+button, .button
+    border-radius: 4px
     width: $button-width
     height: $button-height
     background-color: $color-accent
     color: $color-white
     border: 2px solid $color-accent
     outline: 0
-    /*SET FOCUS STATE FOR REG BUTTONS*/
-    
+    font-size: $font-size-sm
+button:focus, button:hover,
+.button:focus, .button:hover
+    background-color: $color-accent-light
+    color: $color-accent
+    border: 2px solid $color-accent-light
