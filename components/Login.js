@@ -16,11 +16,11 @@ export default function Login(){
         <section>
             <form onSubmit={e=>handleSubmit(e)}>
                 <fieldset>
-                    <label>Email</label>
+                    <label htmlFor='email'>Email</label>
                     <input name='email' type='text' />
                 </fieldset>
                 <fieldset>
-                    <label>Password</label>
+                    <label htmlFor='password'>Password</label>
                     <input name='password' type='password' />
                 </fieldset>
                 <div className='form-button-wrapper'>
