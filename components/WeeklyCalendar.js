@@ -1,7 +1,8 @@
-import React, {Fragment} from 'react'
+import React from 'react'
 import TimeInterval from './TimeIntervals'
 import data from './fake-data.json'
 import SafeCalendarView from './SafeCalendarView'
+import CalendarContextProvider from '../contexts/calendarContext'
 
 export default function WeeklyCalendar(){
     //loop through calendar, pass into calendar day
@@ -9,9 +10,11 @@ export default function WeeklyCalendar(){
     //for next seven days, 
     const days = data
     return(
-        <div className='calendar-full-wrapper'>
-            <TimeInterval />
-            <SafeCalendarView days={days}/>
-        </div>
+        <CalendarContextProvider>
+            <div className='calendar-full-wrapper'>
+                <TimeInterval />
+                <SafeCalendarView days={days}/>
+            </div>
+        </CalendarContextProvider>
     )
 }
