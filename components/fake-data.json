@@ -3,27 +3,33 @@
     "schedule": [
             {
             "start": 0,
-            "end": 1,
-            "activity": "Breakfast",
+            "end": 5,
+            "activity": "Work",
+            "color": "green"
+            },
+            {
+            "start": 5,
+            "end": 5.5,
+            "activity": "Break",
+            "color": "gray"
+            },
+            {
+            "start": 5.5,
+            "end": 8,
+            "activity": "Work",
+            "color": "green"
+            },
+            {
+            "start": 8,
+            "end": 9,
+            "activity": "Cook",
             "color": "red"
             },
             {
-            "start": 1,
-            "end": 2,
-            "activity": "Breakfast",
-            "color": "red"
-            },
-            {
-            "start": 2,
-            "end": 3,
-            "activity": "Breakfast",
-            "color": "red"
-            },
-            {
-            "start": 4,
-            "end": 1,
-            "activity": "Breakfast",
-            "color": "red"
+            "start": 9,
+            "end": 10,
+            "activity": "Break",
+            "color": "gray"
             }
         ]
     },
@@ -31,27 +37,33 @@
         "schedule": [
             {
             "start": 0,
-            "end": 1,
-            "activity": "Breakfast",
+            "end": 5,
+            "activity": "Work",
+            "color": "green"
+            },
+            {
+            "start": 5,
+            "end": 5.5,
+            "activity": "Break",
+            "color": "gray"
+            },
+            {
+            "start": 5.5,
+            "end": 8,
+            "activity": "Work",
+            "color": "green"
+            },
+            {
+            "start": 8,
+            "end": 9,
+            "activity": "Cook",
             "color": "red"
             },
             {
-            "start": 1,
-            "end": 2,
-            "activity": "Breakfast",
-            "color": "red"
-            },
-            {
-            "start": 2,
-            "end": 3,
-            "activity": "Breakfast",
-            "color": "red"
-            },
-            {
-            "start": 4,
-            "end": 1,
-            "activity": "Breakfast",
-            "color": "red"
+            "start": 9,
+            "end": 10,
+            "activity": "Break",
+            "color": "gray"
             }
         ]
     },
@@ -59,55 +71,33 @@
         "schedule": [
             {
             "start": 0,
-            "end": 1,
-            "activity": "Breakfast",
+            "end": 5,
+            "activity": "Work",
+            "color": "green"
+            },
+            {
+            "start": 5,
+            "end": 5.5,
+            "activity": "Break",
+            "color": "gray"
+            },
+            {
+            "start": 5.5,
+            "end": 8,
+            "activity": "Work",
+            "color": "green"
+            },
+            {
+            "start": 8,
+            "end": 9,
+            "activity": "Cook",
             "color": "red"
             },
             {
-            "start": 1,
-            "end": 2,
-            "activity": "Breakfast",
-            "color": "red"
-            },
-            {
-            "start": 2,
-            "end": 3,
-            "activity": "Breakfast",
-            "color": "red"
-            },
-            {
-            "start": 4,
-            "end": 1,
-            "activity": "Breakfast",
-            "color": "red"
-            }
-        ]
-    },
-    {"day": "Thursday",
-        "schedule": [
-            {
-            "start": 0,
-            "end": 1,
-            "activity": "Breakfast",
-            "color": "red"
-            },
-            {
-            "start": 1,
-            "end": 2,
-            "activity": "Breakfast",
-            "color": "red"
-            },
-            {
-            "start": 2,
-            "end": 3,
-            "activity": "Breakfast",
-            "color": "red"
-            },
-            {
-            "start": 4,
-            "end": 1,
-            "activity": "Breakfast",
-            "color": "red"
+            "start": 9,
+            "end": 10,
+            "activity": "Break",
+            "color": "gray"
             }
         ]
     },
@@ -115,27 +105,33 @@
         "schedule": [
             {
             "start": 0,
-            "end": 1,
-            "activity": "Breakfast",
+            "end": 5,
+            "activity": "Work",
+            "color": "green"
+            },
+            {
+            "start": 5,
+            "end": 5.5,
+            "activity": "Break",
+            "color": "gray"
+            },
+            {
+            "start": 5.5,
+            "end": 8,
+            "activity": "Work",
+            "color": "green"
+            },
+            {
+            "start": 8,
+            "end": 9,
+            "activity": "Cook",
             "color": "red"
             },
             {
-            "start": 1,
-            "end": 2,
-            "activity": "Breakfast",
-            "color": "red"
-            },
-            {
-            "start": 2,
-            "end": 3,
-            "activity": "Breakfast",
-            "color": "red"
-            },
-            {
-            "start": 4,
-            "end": 1,
-            "activity": "Breakfast",
-            "color": "red"
+            "start": 9,
+            "end": 10,
+            "activity": "Break",
+            "color": "gray"
             }
         ]
     },
@@ -143,27 +139,33 @@
         "schedule": [
             {
             "start": 0,
-            "end": 1,
-            "activity": "Breakfast",
+            "end": 5,
+            "activity": "Work",
+            "color": "green"
+            },
+            {
+            "start": 5,
+            "end": 5.5,
+            "activity": "Break",
+            "color": "gray"
+            },
+            {
+            "start": 5.5,
+            "end": 8,
+            "activity": "Work",
+            "color": "green"
+            },
+            {
+            "start": 8,
+            "end": 9,
+            "activity": "Cook",
             "color": "red"
             },
             {
-            "start": 1,
-            "end": 2,
-            "activity": "Breakfast",
-            "color": "red"
-            },
-            {
-            "start": 2,
-            "end": 3,
-            "activity": "Breakfast",
-            "color": "red"
-            },
-            {
-            "start": 4,
-            "end": 1,
-            "activity": "Breakfast",
-            "color": "red"
+            "start": 9,
+            "end": 10,
+            "activity": "Break",
+            "color": "gray"
             }
         ]
 
@@ -172,27 +174,33 @@
         "schedule": [
             {
             "start": 0,
-            "end": 1,
-            "activity": "Breakfast",
+            "end": 5,
+            "activity": "Work",
+            "color": "green"
+            },
+            {
+            "start": 5,
+            "end": 5.5,
+            "activity": "Break",
+            "color": "gray"
+            },
+            {
+            "start": 5.5,
+            "end": 8,
+            "activity": "Work",
+            "color": "green"
+            },
+            {
+            "start": 8,
+            "end": 9,
+            "activity": "Cook",
             "color": "red"
             },
             {
-            "start": 1,
-            "end": 2,
-            "activity": "Breakfast",
-            "color": "red"
-            },
-            {
-            "start": 2,
-            "end": 3,
-            "activity": "Breakfast",
-            "color": "red"
-            },
-            {
-            "start": 4,
-            "end": 1,
-            "activity": "Breakfast",
-            "color": "red"
+            "start": 9,
+            "end": 10,
+            "activity": "Break",
+            "color": "gray"
             }
         ]
     }
