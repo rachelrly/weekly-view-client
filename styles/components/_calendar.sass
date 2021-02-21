@@ -1,3 +1,33 @@
-.calendar-wrapper
-    display: grid
-    grid-template-columns: repeat(8, 100px)
+.calendar-full-wrapper
+    padding: $spacer-sm
+    width: inherit
+    display: flex
+    justify-content: stretch
+    .calendar-display-wrapper
+        flex: 5
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        width: 100%
+        .calendar-days-wrapper
+            display: flex
+            width: inherit
+            flex: 10
+            overflow-y: hidden
+    .calendar-day-wrapper
+        display: subgrid
+        grid-template-columns: 100%
+        grid-template-rows: repeat(36, 100px)
+    
+
+.calendar-side-button
+    background-color: $color-accent-light
+    width: 40px
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 100%
+    svg
+        fill: $color-accent
+        font-size: 40px
+        

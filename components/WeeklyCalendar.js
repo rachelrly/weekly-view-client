@@ -1,18 +1,17 @@
-import React from 'react'
-import CalendarDay from './CalendarDay'
+import React, {Fragment} from 'react'
 import TimeInterval from './TimeIntervals'
 import data from './fake-data.json'
+import SafeCalendarView from './SafeCalendarView'
 
 export default function WeeklyCalendar(){
     //loop through calendar, pass into calendar day
     //create grid with x cols and 8 rows
     //for next seven days, 
     const days = data
-    console.log(days)
     return(
-        <div className='calendar-wrapper'>
+        <div className='calendar-full-wrapper'>
             <TimeInterval />
-            {days.map((d, idx) => <CalendarDay  key={idx} {...d}/>)}
+            <SafeCalendarView days={days}/>
         </div>
     )
 }
