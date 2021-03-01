@@ -10,7 +10,7 @@ export default function Login(){
         const email = e.target.email.value
         const password = e.target.password.value
         const userLogInfo = JSON.stringify({
-            email,
+            email: email.toLowerCase(),
             password
         })
         postLogin(userLogInfo)

@@ -16,7 +16,7 @@ export default function Registration(){
         
         // Moved stringify outside of the http call, small performance improvement.
         const userLogInfo = JSON.stringify({
-            email,
+            email : email.toLowerCase(),
             password
         })
         // added async / await to chain login after register
