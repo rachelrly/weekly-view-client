@@ -1,9 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
-import { postNewUser} from '../services/auth-api-service'
+import { useRouter } from 'next/router'
+import { postNewUser, postLogin} from '../services/auth-api-service'
 
 export default function Registration(){
-    const handleRegister = e => {
+    let router = useRouter();
+    const  handleRegister = async e => {
         e.preventDefault()
         const email = e.target.email.value
         const firstName = e.target.firstName.value
@@ -11,7 +13,18 @@ export default function Registration(){
         const password = e.target.password.value
         const repeatPassword = e.target.repeatPassword.value
         const user = {email, firstName, lastName, password, repeatPassword}
-        postNewUser(user)
+        
+        // Moved stringify outside of the http call, small performance improvement.
+        const userLogInfo = JSON.stringify({
+            email,
+            password
+        })
+        // added async / await to chain login after register
+        await postNewUser(user);
+        // Call log in
+        await postLogin(userLogInfo);
+        // Route to home
+        router.push('/');
     }
 
     return(

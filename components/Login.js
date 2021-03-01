@@ -4,11 +4,16 @@ import {postLogin} from '../services/auth-api-service'
 
 export default function Login(){
 
+    
     const handleSubmit = e => {
         e.preventDefault()
         const email = e.target.email.value
         const password = e.target.password.value
-        postLogin({email, password})
+        const userLogInfo = JSON.stringify({
+            email,
+            password
+        })
+        postLogin(userLogInfo)
     }
 
     return (
