@@ -1,11 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import {postLogin} from '../services/auth-api-service'
 
 export default function Login(){
-
+    let router = useRouter();
     
-    const handleSubmit = e => {
+    const handleSubmit = async e => {
         e.preventDefault()
         const email = e.target.email.value
         const password = e.target.password.value
@@ -13,7 +14,8 @@ export default function Login(){
             email: email.toLowerCase(),
             password
         })
-        postLogin(userLogInfo)
+        await postLogin(userLogInfo);
+        router.push('/');
     }
 
     return (

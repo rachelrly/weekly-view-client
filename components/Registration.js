@@ -8,17 +8,18 @@ export default function Registration(){
     const  handleRegister = async e => {
         e.preventDefault()
         const email = e.target.email.value
-        const firstName = e.target.firstName.value
-        const lastName = e.target.lastName.value
+        const first_name = e.target.firstName.value
+        const last_name = e.target.lastName.value
         const password = e.target.password.value
         const repeatPassword = e.target.repeatPassword.value
-        const user = {email, firstName, lastName, password, repeatPassword}
+        const user = JSON.stringify({user:{email, first_name, last_name, password, repeatPassword}});
         
         // Moved stringify outside of the http call, small performance improvement.
         const userLogInfo = JSON.stringify({
             email : email.toLowerCase(),
             password
         })
+        console.log(user);
         // added async / await to chain login after register
         await postNewUser(user);
         // Call log in
