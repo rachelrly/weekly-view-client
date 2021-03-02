@@ -10,7 +10,11 @@ const TokenService ={
 
   //grabs auth token
   getAuthToken() {
-    return window.localStorage.getItem(TOKEN_KEY);
+    if (typeof window !== "undefined") {
+      // browser code
+      return window.localStorage.getItem(TOKEN_KEY);
+    }
+    
   },
 
   //clears auth token
@@ -18,9 +22,9 @@ const TokenService ={
     window.localStorage.removeItem(TOKEN_KEY);
   },
 
-  // checks if use has auth token
+  // checks if user has auth token
   hasAuthToken() {
-    return !!this.getAuthToken();
+    return !!this.getAuthToken()
   },
   getHeaders() {
     return {

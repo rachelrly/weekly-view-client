@@ -18,8 +18,9 @@ export default function Login(){
             password
         })
         const result = await postLogin(userLogInfo);
-        TokenService.saveAuthToken(result.data.token);
+        await TokenService.saveAuthToken(result.data.token);
         
+        console.log(result);
     
         Context.addUserId(result.data.user.id);
         

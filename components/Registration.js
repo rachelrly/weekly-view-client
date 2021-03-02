@@ -32,7 +32,7 @@ export default function Registration(){
         // saves auth token (JWT)
         TokenService.saveAuthToken(result.data.token);
         // adds user id to context, theres a getter in users context.
-        Context.addUserId(result.data.user.id);
+        await Context.addUserId(result.data.user.id);
         // Route to home
         router.push('/');
     }
