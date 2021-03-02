@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import TokenService from '../services/token-service'
 import { postNewUser, postLogin} from '../services/auth-api-service'
 
 export default function Registration(){
@@ -23,7 +24,11 @@ export default function Registration(){
         // added async / await to chain login after register
         await postNewUser(user);
         // Call log in
-        await postLogin(userLogInfo);
+        const result = await postLogin(userLogInfo);
+        
+        // saves auth token (JWT)
+        TokenService.saveAuthToken(result.data.token);
+        
         // Route to home
         router.push('/');
     }

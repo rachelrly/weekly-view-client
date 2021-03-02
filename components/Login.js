@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import TokenService from '../services/token-service'
 import {postLogin} from '../services/auth-api-service'
 
 export default function Login(){
@@ -14,7 +15,8 @@ export default function Login(){
             email: email.toLowerCase(),
             password
         })
-        await postLogin(userLogInfo);
+        const result = await postLogin(userLogInfo);
+        TokenService.saveAuthToken(result.data.token);
         router.push('/');
     }
 
