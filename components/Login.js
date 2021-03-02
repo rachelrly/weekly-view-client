@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import TokenService from '../services/token-service'
 import { UserContext } from '../contexts/userContext'
-import {postLogin} from '../services/auth-api-service'
+import {postLogin, grabUserData} from '../services/auth-api-service'
 
 export default function Login(){
     let router = useRouter();
@@ -20,10 +20,14 @@ export default function Login(){
         const result = await postLogin(userLogInfo);
         await TokenService.saveAuthToken(result.data.token);
         
-        console.log(result);
+        //console.log(result);
     
-        Context.addUserId(result.data.user.id);
+        await Context.addUserId(result.data.user.id);
         
+
+        // this is temporary for data view
+        console.table(grabUserData(result.data.user.id));
+
         router.push('/');
     }
 

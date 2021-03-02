@@ -1,3 +1,5 @@
+import TokenService from '../services/token-service'
+
 export function postLogin(user) {
   return fetch(`${process.env.API_ENDPOINT}/sessions`, {
     method: "POST",
@@ -18,4 +20,13 @@ export function postNewUser(user) {
     headers: { "content-type": "application/json" },
     body: user,
   });
+}
+
+export function grabUserData(userId) {
+    return fetch(`${process.env.API_ENDPOINT}/users/${userId}`,{
+        method: "GET",
+        headers: TokenService.getHeaders()
+    }).then((res) =>
+        res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
+    );
 }
