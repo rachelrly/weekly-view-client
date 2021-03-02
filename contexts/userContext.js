@@ -7,9 +7,26 @@ export default function UserContextProvider({children}){
     const [userId, setUserId] = useState(null)
     const [error, setError] = useState(null)
 
+    //logout function
+    const processLogout = () => {
+        TokenService.clearAuthToken();
+        setUserId(null);
+    };
+
+    const addUserId = (id) => {
+        setUserId(id);
+    };
+
+    const getUserId = () => {
+        return userId;
+    };
 
 
-    const value = {}
+    const value = {
+        processLogout,
+        addUserId,
+        getUserId
+    }
     return (
         <UserContext.Provider value={value}>{children}</UserContext.Provider>
     )
