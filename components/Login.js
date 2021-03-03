@@ -1,11 +1,14 @@
 import React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import {postLogin} from '../services/auth-api-service'
+import TokenService from '../services/token-service'
+import { UserContext } from '../contexts/userContext'
+import {postLogin, grabUserData} from '../services/auth-api-service'
 
 export default function Login(){
     let router = useRouter();
-    
+    const Context = React.useContext(UserContext);
+
     const handleSubmit = async e => {
         e.preventDefault()
         const email = e.target.email.value
@@ -14,7 +17,17 @@ export default function Login(){
             email: email.toLowerCase(),
             password
         })
-        await postLogin(userLogInfo);
+        const result = await postLogin(userLogInfo);
+        await TokenService.saveAuthToken(result.data.token);
+        
+        //console.log(result);
+    
+        await Context.addUserId(result.data.user.id);
+        
+
+        // this is temporary for data view
+        console.table(grabUserData(result.data.user.id));
+
         router.push('/');
     }
 

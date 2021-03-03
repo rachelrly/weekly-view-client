@@ -1,10 +1,14 @@
 import React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import TokenService from '../services/token-service'
+import { UserContext } from '../contexts/userContext'
 import { postNewUser, postLogin} from '../services/auth-api-service'
 
 export default function Registration(){
     let router = useRouter();
+    const Context = React.useContext(UserContext);
+
     const  handleRegister = async e => {
         e.preventDefault()
         const email = e.target.email.value
@@ -23,7 +27,12 @@ export default function Registration(){
         // added async / await to chain login after register
         await postNewUser(user);
         // Call log in
-        await postLogin(userLogInfo);
+        const result = await postLogin(userLogInfo);
+        
+        // saves auth token (JWT)
+        TokenService.saveAuthToken(result.data.token);
+        // adds user id to context, theres a getter in users context.
+        await Context.addUserId(result.data.user.id);
         // Route to home
         router.push('/');
     }
